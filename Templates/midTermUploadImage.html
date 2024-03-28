@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Bike Image Upload</title>
+<style>
+  body {
+    font-family:  sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    color: #000;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type=file] {
+    margin-bottom: 16px;
+  }
+
+  input[type=submit] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>E-Bike Image Upload Form</h2>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" id="imageInput" name="file" required>
+      <input type="submit" value="Upload Image">
+    </form>
+</div>
+</body>
+</html>

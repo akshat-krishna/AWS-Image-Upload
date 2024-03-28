@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Bike Image Upload</title>
+<style>
+  body {
+    font-family:  sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    color: #000;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type=file] {
+    margin-bottom: 16px;
+  }
+
+  input[type=submit] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>E-Bike Image Details</h2>
+    <ul>
+      <li>File Name: {{item['file-name']['S']}}</li>
+      <li>Type: {{item['content-type']['S']}}</li>
+      <li>Last Modified: {{item['last-update-time']['S']}}</li>
+      <li>Size(in KB): {{item['image-size']['N']}}</li>
+    </ul>
+    <form id="GoBack" action="/" method="GET">
+      <input type="submit" value="New Image">
+    </form>
+</div>
+</body>
+</html>
